@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_socketio import SocketIO
-from pop import create_app
+from app import create_app
 
 app = create_app()
 socket = SocketIO(app)
