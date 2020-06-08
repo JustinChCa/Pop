@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
+{% set active_page = "index" %}
 {% block title %} Home {% endblock %}
 {% block content %}
 <div class="container">
-  <ul id="msgBoard" class="list-group">
-  </ul>
-  <form id="msgForm" class="fixed-bottom border-top">
+  <div id="msgBoard" class="container pb-sm-5">
+  </div>
+  <form id="msgForm" class="fixed-bottom border-top bg-light">
     <div class="form-row justify-content-center">
       <div class="col-9 form-group my-1 mx-sm-2">
         <input type="text" class="form-control" id="message" aria-describedby="sendMessage" placeholder="Message">
@@ -15,6 +16,6 @@
 </div>
 {% endblock %}
 {% block msg %}
-<script type="text/javascript" src="{{ url_for('static', filename='message.js') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='msg.js') }}">
 </script>
 {% endblock %}
